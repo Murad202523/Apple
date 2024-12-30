@@ -1,0 +1,940 @@
+:root {
+    --blue: #0071e3;
+}
+
+nav {
+    background: #f2f2f2;
+}
+
+.container {
+    padding: 0 3%;
+}
+
+.nav_flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+
+    a i {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+
+    menu {
+        display: none;
+        gap: 18px;
+        font: 600 0.66em Arial;
+
+        a {
+            position: relative;
+            padding: 5px 0;
+        }
+
+        a::after {
+            content: "";
+            position: absolute;
+            width: 0px;
+            height: 2px;
+            right: 50%;
+            bottom: 0;
+            background: #624d4d;
+            transition: .3s;
+        }
+
+        a:hover::after {
+            width: 100%;
+            right: 0;
+        }
+
+    }
+}
+
+.pad8 {
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.dnone {
+    display: inline;
+}
+
+.hidenav {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: .3s;
+
+    menu {
+        padding: 20px 40px;
+        font: 1.2em / 2 Arial;
+    }
+}
+
+input {
+    display: none;
+}
+
+#navbar:checked~.hidenav {
+    left: 0;
+}
+
+.hidenavclose {
+    display: flex;
+    justify-content: end;
+    margin: 10px 20px;
+
+    label {
+        padding: 16px 20px;
+        cursor: pointer;
+    }
+}
+
+.headerslider {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: scroll;
+
+    div {
+        text-align: center;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    span {
+        font-size: 0.6em;
+        color: #bf4800;
+    }
+}
+
+.headerslider::-webkit-scrollbar {
+    display: none;
+}
+
+.bggray {
+    background: #f2f2f2;
+}
+
+.bggraylight {
+    background: #fbfbfb;
+}
+
+.center {
+    text-align: center;
+}
+
+.headerlast {
+    padding: 20px 0 0 0;
+
+    p {
+        font-size: 1.3em;
+    }
+}
+
+.gradient {
+    display: inline-block;
+    color: var(--blue);
+    margin: 15px 0;
+}
+
+.gradient::after {
+    display: block;
+    content: "";
+    width: 0px;
+    height: 2px;
+    margin: 5px 0;
+    background: transparent;
+}
+
+.gradient:hover::after {
+    animation: border .4s linear forwards;
+}
+
+@keyframes border {
+    0% {
+        background: transparent;
+        width: 0;
+    }
+
+    25% {
+        background: yellow;
+        width: 25%;
+    }
+
+    50% {
+        background: linear-gradient(to right, yellow, orange);
+        width: 50%;
+    }
+
+    75% {
+        background: linear-gradient(to right, yellow, orange, green);
+        width: 75%;
+    }
+
+    100% {
+        background: linear-gradient(to right, yellow, orange, green, blue);
+        width: 100%;
+    }
+}
+
+section {
+    padding: 40px 0;
+}
+
+.titanfirst {
+    span {
+        font-size: 0.8em;
+        color: #bf4800;
+    }
+
+    h6 {
+        color: #8b887eff;
+        font: 400 1.1em Arial;
+        padding: 10px;
+    }
+
+    p {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+.btn {
+    color: #fff;
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 10px 25px;
+    border-radius: 30px;
+    margin: 10px 0;
+    transition: .3s;
+    background: var(--blue);
+}
+
+.titanfirst .btn:hover {
+    box-shadow: 3px 5px 7px rgb(172, 185, 236);
+}
+
+.titanphoto {
+    height: 40px;
+    background: url("../img/titanium.jpeg") center / contain no-repeat;
+}
+
+.titanlast {
+    background: url("../img/titanium-mobile.jpeg") center / contain no-repeat;
+    height: 50vh;
+}
+
+.newphoria {
+    span {
+        font-size: 0.8em;
+        color: #bf4800;
+    }
+
+    h6 {
+        font: 400 1.1em Arial;
+        margin: 10px;
+    }
+
+    h2 {
+        font: 500 1.8em / 0.8 Arial;
+        margin: 20px 0;
+    }
+
+    p {
+        margin: 15px 0;
+        font-size: 0.9em;
+    }
+
+    .btn:hover {
+        box-shadow: 3px 5px 7px #010e42;
+    }
+}
+
+.newplast {
+    background: url("../img/newphoria.jpeg") center/contain no-repeat;
+    height: 20vh;
+}
+
+.love {
+    h6 {
+        font: 400 1.1em Arial;
+        margin: 10px 0;
+    }
+
+    h2 {
+        color: #1e3791;
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+}
+
+.lovefirst div a:hover,
+.iphonetext div a:hover {
+    box-shadow: 3px 5px 7px #010e42;
+}
+
+.lovelast {
+    background: url('../img/lovebg.jpeg') center / contain no-repeat;
+    height: 50vh;
+}
+
+.guide h4 {
+    font: 600 1.4em / 2 Arial;
+}
+
+.guide h2 {
+    font: 500 1.8em / 0.8 Arial;
+    margin: 20px 0;
+}
+
+.guidefirst a {
+    display: inline-block;
+    background: #ffffffcc;
+    color: var(--blue);
+    margin: 10px 0;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-size: 0.8em;
+}
+
+.guidelast {
+    background: url('../img/applebg12.jpg') center / cover no-repeat;
+    height: 50vh;
+}
+
+.iphones h1 {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.whichphone {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.informationcard {
+    flex: 0 1 275px;
+}
+
+.iphonesimg {
+    height: 300px;
+    padding: 0 10px;
+}
+
+.iphonesimg img:first-child {
+    width: 100%;
+    height: 85%;
+    object-fit: contain;
+    padding: 20px 0 10px 0;
+}
+
+.iphonetext span {
+    font-size: 0.8em;
+    color: #bf4800;
+}
+
+.iphonetext p:nth-of-type(2) {
+    margin: 10px 0;
+}
+
+.iphonetext p:nth-of-type(3) {
+    font-size: 0.8em;
+    margin: 20px 0 0 0;
+}
+
+.informationcard hr {
+    width: 60%;
+    height: 1px;
+    margin: auto;
+    background: #000;
+}
+
+.text div {
+    padding: 20px 0;
+}
+
+.text p {
+    font: 0.7em / 2 Arial;
+    padding: 0 8px;
+}
+
+.text img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.savephone {
+    font: 500 1.8em / 0.8 Arial;
+    margin: 20px 0;
+}
+
+.card {
+    background: #fff;
+    padding: 10px;
+    margin: 15px;
+
+    h5 {
+        padding: 30px;
+        font-size: 1.5em;
+    }
+
+    p {
+        color: #6e6e73;
+    }
+}
+
+.cardimg1 {
+    height: 30vh;
+    background: url('../img/savei_phone.jpg') center / contain no-repeat;
+}
+
+.cards .cardimg1 {
+    background-image: url('../img/aplepphone.jpeg');
+}
+
+.cardimg2 {
+    height: 25vh;
+    background: url('../img/appleemoji.jpeg') center / contain no-repeat;
+}
+
+.why {
+    background: #fff;
+    margin: 20px 10px;
+    padding: 30px 15px;
+
+    h2 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+}
+
+.fa-arrow-up-right-from-square {
+    margin: 0 10px 0 0;
+}
+
+.whylast {
+    height: 25vh;
+    background: url('../img/applebg6.jpeg') left / cover no-repeat;
+}
+
+.featured {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.magsafe,
+.magic,
+.make {
+    background: #fff;
+    margin: 20px 10px;
+    padding: 10px;
+
+    h2 {
+        font: 600 1.8em Arial;
+        margin: 20px 0 30px 0;
+    }
+}
+
+.magfirst p {
+    max-width: 300px;
+    margin: 15px auto;
+    font: 1.1em / 1.5 Arial;
+}
+
+.maglast {
+    background: url('../img/applephones.jpeg') center / contain no-repeat;
+    height: 30vh;
+    margin: 30px 0;
+}
+
+.airfirst p {
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+.magsafe:nth-child(6) .maglast {
+    background-image: url('../img/airtag__b81h4czx41yq_medium.jpg');
+}
+
+.magiclast {
+    height: 20vh;
+    background: url('../img/applebg9.jpeg') top / contain no-repeat;
+}
+
+.pay {
+    padding: 30px 10px;
+
+    h5 {
+        font: 600 1.3em Arial;
+        padding: 15px 0;
+    }
+}
+
+.makefirst h2 {
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.makelast {
+    background: url('../img/ios17.jpg') center / cover no-repeat;
+    height: 40vh;
+}
+
+.makelast1 {
+    background: url('../img/applebg.jpeg') center / cover no-repeat;
+    margin: 10px 0;
+    height: 40vh;
+}
+
+.makelast2 {
+    background: url('../img/privacy.jpg') bottom / cover no-repeat;
+    margin: 10px 0;
+    height: 40vh;
+}
+
+.one {
+    height: 40px;
+    background: url('../img/apple_one.jpg') center / contain no-repeat;
+}
+
+.bgblack {
+    background: #000;
+    color: #fff;
+}
+
+.getmore p {
+    font-size: 1.4em;
+    margin: 20px 0;
+}
+
+.getmore h2 {
+    margin: 20px 0;
+}
+
+.introducewitdh50 h2 {
+    font-weight: 500;
+}
+
+.introducewitdh50 p {
+    font-size: 1.1em;
+}
+
+.tvlast,
+.tvlast1,
+.tvlast2,
+.tvlast3,
+.tvlast4,
+.tvlast5,
+.tvlast6 {
+    margin: 10px 0;
+    height: 40vh;
+}
+
+.tvlast {
+    background: url('../img/tv+_bg.png') center / cover no-repeat;
+}
+
+.tvlast1 {
+    background: url('../img/music_bg.jpg') center 45px / cover no-repeat;
+}
+
+.tvlast2 {
+    background: url('../img/fitness_bg.jpg') center / cover no-repeat;
+}
+
+.tvlast3 {
+    background: url('../img/arcade_bg.png') center / contain no-repeat;
+}
+
+.tvlast4 {
+    background: url('../img/news_bg.jpeg') center -100px / cover no-repeat;
+}
+
+.tvlast5 {
+    background: url('../img/gift_bg.jpg') bottom / cover no-repeat;
+}
+
+.tvlast6 {
+    background: url('../img/research_app.jpg') center / contain no-repeat;
+    width: 100%;
+    height: 30vh;
+    margin: 30px 0;
+}
+
+.manyword {
+    font-size: 14px;
+    color: #0000007a;
+    padding: 20px 0;
+    text-align: justify;
+}
+
+.manyword ol {
+    padding: 0 0 30px 30px;
+
+    li {
+        list-style: auto;
+    }
+}
+
+.manyword hr, footer hr {
+    width: 100%;
+    height: 1px;
+    background: #0000007A;
+}
+
+footer {
+    font-size: 0.8em;
+    color: #000000bd;
+
+    .ftrfirst {
+        margin: 10px 0 20px 16px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+
+        .fa-apple {
+            font-size: 1.5rem;
+            color: #000;
+        }
+    }
+}
+
+.ftrmenu label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+
+    i {
+        transition: .3s;
+    }
+}
+
+.wdt20 div {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.ftrlist {
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5em;
+    transition: ease-in .3s;
+    padding: 0 0 0 20px;
+}
+
+.ftrlist li:nth-last-child(1) {
+    padding: 0 0 16px 0;
+}
+
+#shop:checked~ul,
+#wallet:checked~ul,
+#account:checked~ul,
+#entertainment:checked~ul,
+#appstore:checked~ul,
+#business:checked~ul,
+#education:checked~ul,
+#care:checked~ul,
+#gover:checked~ul,
+#valu1:checked~ul,
+#valu2:checked~ul {
+    max-height: 300px;
+}
+
+#shop:checked~label i,
+#wallet:checked~label i,
+#account:checked~label i,
+#entertainment:checked~label i,
+#appstore:checked~label i,
+#business:checked~label i,
+#education:checked~label i,
+#care:checked~label i,
+#gover:checked~label i,
+#valu1:checked~label i,
+#valu2:checked~label i {
+    transform: rotate(180deg);
+}
+
+footer p {
+    margin: 20px 0;
+    .ftrlink {
+        color: var(--blue);
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .payment {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .pay {
+            width: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .nav_flex menu {
+        display: flex;
+    }
+
+    .dnone {
+        display: none;
+    }
+
+    .titanlast {
+        width: 60%;
+        margin: auto;
+        background: url("../img/titanium-pc.png") center / contain no-repeat;
+    }
+
+    .newphoria h2 {
+        font-size: 2.8em;
+    }
+
+    .newplast {
+        height: 55vh;
+        background-size: cover;
+    }
+
+    .love h2 {
+        font-size: 3em;
+    }
+
+    .lovelast {
+        height: 100vh;
+    }
+
+    .guide {
+        height: 100vh;
+        background: url('../img/applebg12.jpg') center / cover no-repeat;
+        border-radius: 30px;
+        margin: 20px;
+    }
+
+    .guidefirst {
+        color: #fff;
+    }
+
+    .guidefirst a {
+        color: #000;
+    }
+
+    .guidefirst i {
+        display: none;
+    }
+
+    .guidelast {
+        display: none;
+    }
+
+    .tour {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .iphones h1 {
+        font-size: 3em;
+    }
+
+    .whichphone {
+        font-size: 3em;
+    }
+
+    .informationcard {
+        padding: 0 10px;
+    }
+
+    .informationcard hr {
+        width: 100%;
+    }
+
+    .savephone {
+        font-size: 2.8em;
+    }
+
+    .cards {
+        display: flex;
+
+        .card {
+            width: 50%;
+        }
+    }
+
+    .why {
+        height: 80vh;
+        background: url('../img/applebg6.jpeg') center / cover no-repeat;
+
+        h2 {
+            font-size: 3em;
+        }
+
+        div {
+            max-width: 500px;
+            margin: auto;
+        }
+    }
+
+    .whylast {
+        display: none;
+    }
+
+    .featured {
+        width: 300px;
+        font-size: 3em;
+        margin: 30px auto;
+        padding: 20px;
+
+    }
+
+    .magsafe {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 2.8em;
+        }
+
+        .magfirst,
+        .maglast,
+        .airfirst {
+            width: 50%;
+        }
+
+        .maglast {
+            height: 60vh;
+        }
+    }
+
+    .magsafe:nth-child(6) .maglast {
+        order: -1;
+        background-image: url('../img/appleanahtarlik.jpeg');
+    }
+
+    .magic h2 {
+        font-size: 2.8em;
+        font-weight: 500;
+    }
+
+    .makefirst h2 {
+        font-size: 2.8em;
+    }
+
+    .magiclast {
+        height: 50vh;
+    }
+
+    .makelast {
+        height: 50vh;
+    }
+
+    .makeflex {
+        display: flex;
+
+        .make,
+        .magic {
+            width: 50%;
+        }
+    }
+
+    .whichfirst {
+        background: url('../img/applebg2.jpeg') center / contain no-repeat;
+        width: 50%;
+        height: 50vh;
+    }
+
+    .whichlast {
+        width: 50%;
+    }
+
+    .introducewitdh50,
+    .tvlast6 {
+        width: 50%;
+    }
+
+    .tvlast6 {
+        height: 60vh;
+    }
+
+    .ftrmenu {
+        display: flex;
+        label a {
+            font-size: 1.2em;
+        }
+    }
+
+    .ftrlist {
+        max-height: 300px;
+    }
+
+    .wdt20 {
+        width: 20%;
+        div {
+            border-bottom: none;
+            i {
+                display: none;
+            }
+        }
+    }
+
+    .ftrlast {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width:890px) {
+    .informationcard {
+        flex: 0 1 25%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .love {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lovefirst,
+    .lovelast {
+        width: 50%;
+    }
+
+    .allcard {
+        display: flex;
+    }
+
+    .payment .pay {
+        width: 33.3%;
+    }
+}
